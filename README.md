@@ -1,38 +1,68 @@
-# Dukes Cup
+# HEMA Tournament Series
 
-The Duke's Cup website built with Hugo static site generator.
+A website for HEMA (Historical European Martial Arts) tournament series, built with Hugo and the Hugo Book theme.
 
-## 🚀 Live Site
+## 🚀 Quick Start
 
-The website is automatically deployed to GitHub Pages: https://alexeytrekin.github.io/dukescup/
+```bash
+git clone --recurse-submodules https://github.com/AlexeyTrekin/dukescup.git
+cd dukescup/landing
+hugo server -D --port 1314
+```
 
-## 🛠️ Development
+Visit: **http://localhost:1314**
 
-### Prerequisites
-- [Hugo Extended](https://gohugo.io/installation/) (v0.128.0 or later)
+## 📝 Content Management
 
-### Local Development
-1. Clone this repository
-2. Navigate to the landing directory: `cd landing`
-3. Start the Hugo development server: `hugo server -D`
-4. Open your browser to `http://localhost:1313`
+### Structure
+```
+content/
+├── _index.md                      # Homepage
+└── docs/
+    ├── current-event/
+    │   └── spring-2025.md         # Current tournament
+    ├── past-events/
+    │   └── winter-2024.md         # Past tournaments
+    └── future-events/
+        └── autumn-2025.md         # Upcoming tournaments
+```
 
-### Building for Production
+### Add New Event
+
+Copy an existing event and modify the front matter:
+
+```bash
+cp content/docs/current-event/spring-2025.md content/docs/future-events/summer-2025.md
+```
+
+**Front matter fields:**
+- `event_status`: `"current"`, `"past"`, or `"future"`
+- `application_url`: Registration link (for current events)
+- `results_url`: Results link (for past events)
+- `application_content`: Registration info (markdown)
+- `rules_content`: Tournament rules (markdown)
+- `timetable_content`: Schedule (markdown)
+- `venue_content`: Location & travel info (markdown)
+
+### Images & Assets
+
+Place files in `static/` directory:
+- Images: `static/filename.jpg` → access as `/filename.jpg`
+- Sponsors: `static/sponsors/logo.png` → access as `/sponsors/logo.png`
+
+## 🎨 Customization
+
+**Custom CSS:** `layouts/partials/docs/inject/head.html`
+
+**Event Template:** `layouts/_default/event.html`
+
+**Config:** `hugo.toml`
+
+## 🔄 Deployment
+
 ```bash
 cd landing
 hugo --gc --minify
 ```
 
-## 📁 Project Structure
-- `landing/` - Hugo site source files
-- `.github/workflows/` - GitHub Actions for automatic deployment
-- `landing/themes/ananke/` - Hugo theme (Ananke)
-
-## 🔄 Deployment
-
-The site is automatically deployed to GitHub Pages using GitHub Actions whenever you push to the `main` branch. The workflow:
-
-1. Checks out the code
-2. Sets up Hugo
-3. Builds the site
-4. Deploys to GitHub Pages
+Output in `public/` - deploy to GitHub Pages via Actions on push to `main`.

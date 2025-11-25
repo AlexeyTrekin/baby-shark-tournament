@@ -10,3 +10,6 @@
 [submodule "landing/themes/PaperMod"]
 	path = landing/themes/PaperMod
 	url = https://github.com/adityatelange/hugo-PaperMod.git
+[submodule "landing/themes/hugo-book"]
+	path = landing/themes/hugo-book
+	url = https://github.com/alex-shpak/hugo-book

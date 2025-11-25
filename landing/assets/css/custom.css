@@ -1,0 +1,77 @@
+/* Custom styles for HEMA Tournament Series */
+
+/* Add background image to the entire site */
+body {
+  background-image: url('/2025_1.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* Make content area semi-transparent so background shows through */
+.book-page,
+.book-menu nav,
+.book-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .book-page,
+  .book-menu nav,
+  .book-header {
+    background: rgba(26, 32, 44, 0.95);
+  }
+}
+
+/* Hero section on homepage with logo */
+.book-page h1:first-of-type {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+}
+
+/* Add logo to homepage header */
+.book-page h1:first-of-type::before {
+  content: '';
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1rem;
+  background-image: url('/logo_2025.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Event sections with background */
+.event-section {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Customize sidebar appearance */
+.book-menu nav {
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+/* Make event badges pop */
+.event-badge {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* Enhance buttons */
+.apply-button, .results-button {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+

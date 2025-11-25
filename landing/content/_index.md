@@ -1,21 +1,31 @@
 ---
-title: "Duke's Cup 2025"
-description: "Historical European Martial Arts Tournament"
-cover:
-    image: "2025_2.jpg"
-    alt: "Duke's Cup 2025 Tournament"
-    caption: "Historical European Martial Arts Tournament"
-    relative: false
+title: "HEMA Tournament Series"
 ---
 
-## Key Information
+# HEMA Tournament Series
 
-**📅 Date:** January 1-2, 2000  
-**📍 Location:** Venue TBD  
-**🏆 Registration:** Opens 01.01.2000  
+Welcome to the official website for our Historical European Martial Arts tournament series!
 
-## Apply Now
+## 🗡️ Navigate Using the Sidebar
 
-<a href="https://hemagon.com/tournament/WinterDukesCup" style="display: inline-block; background-color: #1e40af; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin: 10px 0;">🗡️ Apply for Duke's Cup 2025</a>
+Use the menu on the left to explore our tournaments organized by status.
 
-*Join us for an exciting tournament celebrating the art of Historical European Martial Arts. Whether you're a seasoned competitor or new to HEMA, Duke's Cup offers an opportunity to test your skills in a friendly and competitive environment.*
+---
+
+## About the Series
+
+This tournament series brings together HEMA practitioners from around the world to compete in various historical weapons disciplines. Each event features:
+
+- Multiple weapon categories (Longsword, Rapier, Sword & Buckler)
+- International competitors
+- Professional judging and scoring
+- Workshops and training sessions
+- Vendor marketplace
+
+**Click on any event in the sidebar to view full details including rules, schedule, venue information, and registration/results.**
+- International competitors
+- Professional judging and scoring
+- Workshops and training sessions
+- Vendor marketplace
+
+**Click on any event in the sidebar to view full details including rules, schedule, venue information, and registration/results.**

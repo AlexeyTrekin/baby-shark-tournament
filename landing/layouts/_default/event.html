@@ -1,0 +1,247 @@
+{{ define "main" }}
+<style>
+.event-nav {
+  position: sticky;
+  top: 0;
+  background: var(--body-background);
+  border-bottom: 1px solid var(--gray-200);
+  padding: 1rem 0;
+  margin: -1.5rem -1.5rem 2rem -1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.event-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.event-nav li {
+  margin: 0;
+}
+
+.event-nav a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--color-link);
+  transition: color 0.2s;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.event-nav a:hover {
+  color: var(--color-visited);
+  background: var(--gray-100);
+}
+
+.event-section {
+  margin-bottom: 3rem;
+  scroll-margin-top: 5rem;
+}
+
+.event-section h2 {
+  border-bottom: 2px solid var(--color-link);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.event-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.badge-current {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge-past {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.badge-future {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.apply-button, .results-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: all 0.2s;
+}
+
+.apply-button {
+  background: #22c55e;
+  color: white;
+}
+
+.apply-button:hover {
+  background: #16a34a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.results-button {
+  background: #3b82f6;
+  color: white;
+}
+
+.results-button:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.placeholder {
+  padding: 2rem;
+  background: var(--gray-100);
+  border-radius: 8px;
+  text-align: center;
+  color: var(--gray-500);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .event-nav ul {
+    gap: 1rem;
+  }
+  
+  .event-nav a {
+    font-size: 0.875rem;
+  }
+}
+</style>
+
+<article class="markdown book-article">
+  {{ if .Params.event_status }}
+  <span class="event-badge badge-{{ .Params.event_status }}">
+    {{ if eq .Params.event_status "current" }}
+      🔥 Current Event
+    {{ else if eq .Params.event_status "past" }}
+      ✅ Past Event
+    {{ else if eq .Params.event_status "future" }}
+      📅 Future Event
+    {{ end }}
+  </span>
+  {{ end }}
+
+  <h1>{{ .Title }}</h1>
+
+  <nav class="event-nav">
+    <ul>
+      <li><a href="#info">📋 Info</a></li>
+      <li><a href="#application">📝 Application</a></li>
+      <li><a href="#rules">⚔️ Rules</a></li>
+      <li><a href="#timetable">🕐 Timetable</a></li>
+      <li><a href="#venue">📍 Venue & Travel</a></li>
+    </ul>
+  </nav>
+
+  <section id="info" class="event-section">
+    <h2>📋 Event Information</h2>
+    {{ .Content }}
+  </section>
+
+  <section id="application" class="event-section">
+    <h2>📝 Application</h2>
+    {{ if eq .Params.event_status "current" }}
+      {{ if .Params.application_content }}
+        {{ .Params.application_content | markdownify }}
+      {{ else }}
+        <p>Registration is now open for this tournament!</p>
+      {{ end }}
+      
+      {{ if .Params.application_url }}
+        <a href="{{ .Params.application_url }}" class="apply-button" target="_blank">
+          🗡️ Apply Now
+        </a>
+      {{ end }}
+    {{ else if eq .Params.event_status "past" }}
+      <p>This event has concluded. View the results below:</p>
+      
+      {{ if .Params.results_url }}
+        <a href="{{ .Params.results_url }}" class="results-button" target="_blank">
+          📊 View Results
+        </a>
+      {{ else }}
+        <div class="placeholder">
+          Results will be published soon
+        </div>
+      {{ end }}
+    {{ else if eq .Params.event_status "future" }}
+      <div class="placeholder">
+        📅 Applications will open soon. Stay tuned for updates!
+      </div>
+    {{ else }}
+      <div class="placeholder">
+        Information coming soon
+      </div>
+    {{ end }}
+  </section>
+
+  <section id="rules" class="event-section">
+    <h2>⚔️ Rules</h2>
+    {{ if .Params.rules_content }}
+      {{ .Params.rules_content | markdownify }}
+    {{ else }}
+      <div class="placeholder">
+        Tournament rules will be published soon
+      </div>
+    {{ end }}
+  </section>
+
+  <section id="timetable" class="event-section">
+    <h2>🕐 Timetable</h2>
+    {{ if .Params.timetable_content }}
+      {{ .Params.timetable_content | markdownify }}
+    {{ else }}
+      <div class="placeholder">
+        Event schedule will be published soon
+      </div>
+    {{ end }}
+  </section>
+
+  <section id="venue" class="event-section">
+    <h2>📍 Venue & Travel</h2>
+    {{ if .Params.venue_content }}
+      {{ .Params.venue_content | markdownify }}
+    {{ else }}
+      <div class="placeholder">
+        Venue and travel information will be published soon
+      </div>
+    {{ end }}
+  </section>
+</article>
+
+<script>
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+</script>
+
+{{ end }}
