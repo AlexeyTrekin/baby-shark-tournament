@@ -48,3 +48,13 @@ enableEmoji = true
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+# Mount local media folder for development (create ../media/ folder)
+# This lets you preview external images locally before uploading to S3
+[module]
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "../media"
+    target = "static/media"

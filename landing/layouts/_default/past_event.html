@@ -1,0 +1,458 @@
+{{ define "main" }}
+<style>
+/* Force lighter table styling */
+table, table td, table th {
+  font-weight: 300 !important;
+}
+
+table th {
+  font-weight: 500 !important;
+}
+
+table td, table th {
+  padding: 0.35rem 0.75rem !important;
+  line-height: 1.3 !important;
+}
+
+/* Gallery grid styling */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  aspect-ratio: 1;
+  background: var(--gray-100);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Lightbox styling */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.lightbox.active {
+  display: flex !important;
+}
+
+.lightbox #lightbox-img {
+  max-width: 90vw !important;
+  max-height: 90vh !important;
+  width: auto !important;
+  height: auto !important;
+  display: block !important;
+  margin: auto !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative !important;
+  z-index: 10000 !important;
+  object-fit: contain !important;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 10001;
+  background: rgba(0,0,0,0.5);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 8px;
+  user-select: none;
+}
+
+.lightbox-prev {
+  left: 20px;
+}
+
+.lightbox-next {
+  right: 20px;
+}
+
+.lightbox-nav:hover,
+.lightbox-close:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.event-nav {
+  position: sticky;
+  top: 0;
+  background: var(--body-background);
+  border-bottom: 1px solid var(--gray-200);
+  padding: 1rem 0;
+  margin: -1.5rem -1.5rem 2rem -1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.event-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.event-nav li {
+  margin: 0;
+}
+
+.event-nav a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--color-link);
+  transition: color 0.2s;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.event-nav a:hover {
+  color: var(--color-visited);
+  background: var(--gray-100);
+}
+
+.event-section {
+  margin-bottom: 3rem;
+  scroll-margin-top: 5rem;
+}
+
+.event-section h2 {
+  border-bottom: 2px solid var(--color-link);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.event-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.badge-past {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.results-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: all 0.2s;
+}
+
+.results-button {
+  background: #3b82f6;
+  color: white;
+}
+
+.results-button:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.placeholder {
+  padding: 2rem;
+  background: var(--gray-100);
+  border-radius: 8px;
+  text-align: center;
+  color: var(--gray-500);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .event-nav ul {
+    gap: 1rem;
+  }
+  
+  .event-nav a {
+    font-size: 0.875rem;
+  }
+}
+</style>
+
+<article class="markdown book-article">
+  {{ if .Params.event_status }}
+  <span class="event-badge badge-{{ .Params.event_status }}">
+    ✅ Past Event
+  {{ end }}
+
+  <h1>{{ .Title }}</h1>
+
+  <nav class="event-nav">
+    <ul>
+      <li><a href="#info">📋 Info</a></li>
+      <li><a href="#participants">📝 Participants</a></li>
+      <li><a href="#rules">⚔️ Rules</a></li>
+      <li><a href="#results">🏆 Results</a></li>
+      <li><a href="#gallery">🖼️ Gallery</a></li>
+    </ul>
+  </nav>
+
+  <section id="info" class="event-section">
+    <h2>📋 Event Information</h2>
+    {{ .Content }}
+  </section>
+
+  <section id="participants" class="event-section">
+    <h2>📝 Participants</h2>
+    {{ if .Params.participants_url }}
+      <a href="{{ .Params.participants_url }}" class="results-button" target="_blank">
+        📋 View Full Participants List
+      </a>
+    {{ end }}
+    {{ if .Params.participants_content }}
+      {{ .Params.participants_content | markdownify }}
+    {{ else }}
+      <div class="placeholder">
+        Participants list will be published soon
+      </div>
+    {{ end }}
+  </section>
+
+  <section id="rules" class="event-section">
+    <h2>⚔️ Rules</h2>
+    {{ if .Params.rules_content }}
+      {{ .Params.rules_content | markdownify }}
+    {{ else }}
+      <div class="placeholder">
+        Tournament rules will be published soon
+      </div>
+    {{ end }}
+  </section>
+
+  <section id="results" class="event-section">
+    <h2>🏆 Results</h2>
+    {{ if .Params.results_url }}
+      <a href="{{ .Params.results_url }}" class="results-button" target="_blank">
+        View Full Results
+      </a>
+    {{ end }}
+    {{ if .Params.results_content }}
+      {{ .Params.results_content | markdownify }}
+    {{ else }}
+      <div class="placeholder">
+        Event schedule will be published soon
+      </div>
+    {{ end }}
+  </section>
+
+  <section id="gallery" class="event-section">
+    <h2>🖼️ Gallery</h2>
+    {{ $images := .Resources.ByType "image" }}
+    {{ if $images }}
+      <div class="gallery-grid">
+        {{ range $index, $image := $images }}
+          {{ $thumb := $image.Fill "200x200 q85" }}
+          <div class="gallery-item" onclick="openLightbox({{ $index }})">
+            <img src="{{ $thumb.RelPermalink }}" alt="Tournament photo {{ add $index 1 }}" loading="lazy">
+          </div>
+        {{ end }}
+      </div>
+
+      <!-- Lightbox -->
+      <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+        <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="changeImage(-1); event.stopPropagation();">&#10094;</span>
+        <img id="lightbox-img" src="" alt="Gallery image">
+        <span class="lightbox-nav lightbox-next" onclick="changeImage(1); event.stopPropagation();">&#10095;</span>
+      </div>
+    {{ else if .Params.gallery_images }}
+      <div class="gallery-grid">
+        {{ range $index, $image := .Params.gallery_images }}
+          <div class="gallery-item" onclick="openLightbox({{ $index }})">
+            {{/* Support both simple URLs and {url, thumb} objects */}}
+            {{ if reflect.IsMap $image }}
+              <img src="{{ $image.thumb }}" alt="Tournament photo {{ add $index 1 }}" loading="lazy">
+            {{ else }}
+              <img src="{{ $image }}" alt="Tournament photo {{ add $index 1 }}" loading="lazy">
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+
+      <!-- Lightbox -->
+      <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+        <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="changeImage(-1); event.stopPropagation();">&#10094;</span>
+        <img id="lightbox-img" src="" alt="Gallery image">
+        <span class="lightbox-nav lightbox-next" onclick="changeImage(1); event.stopPropagation();">&#10095;</span>
+      </div>
+    {{ else if .Params.gallery_content }}
+      {{ .Params.gallery_content | markdownify }}
+    {{ else }}
+      <div class="placeholder">
+        Gallery will be published soon
+      </div>
+    {{ end }}
+  </section>
+</article>
+
+{{ $images := .Resources.ByType "image" }}
+{{ if $images }}
+<script>
+// Gallery lightbox functionality
+let currentImageIndex = 0;
+const images = [
+  {{ range $index, $image := $images }}
+    {{ if $index }},{{ end }}"{{ $image.RelPermalink }}"
+  {{ end }}
+];
+
+window.openLightbox = function(index) {
+  currentImageIndex = index;
+  
+  const lightbox = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  
+  if (lightbox && img) {
+    if (lightbox.parentElement !== document.body) {
+      document.body.appendChild(lightbox);
+    }
+    lightbox.classList.add('active');
+    img.src = images[currentImageIndex];
+    document.body.style.overflow = 'hidden';
+  } else {
+    console.error('Lightbox or image element not found!');
+  }
+}
+
+function closeLightbox(event) {
+  if (event.target.id === 'lightbox' || event.target.classList.contains('lightbox-close')) {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+}
+
+function changeImage(direction) {
+  currentImageIndex += direction;
+  if (currentImageIndex < 0) currentImageIndex = images.length - 1;
+  if (currentImageIndex >= images.length) currentImageIndex = 0;
+  document.getElementById('lightbox-img').src = images[currentImageIndex];
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', function(e) {
+  const lightbox = document.getElementById('lightbox');
+  if (lightbox && lightbox.classList.contains('active')) {
+    if (e.key === 'Escape') closeLightbox({ target: lightbox });
+    if (e.key === 'ArrowLeft') changeImage(-1);
+    if (e.key === 'ArrowRight') changeImage(1);
+  }
+});
+</script>
+{{ else if .Params.gallery_images }}
+<script>
+// Gallery lightbox functionality
+let currentImageIndex = 0;
+const images = [
+  {{ range $index, $image := .Params.gallery_images }}
+    {{ if $index }},{{ end }}{{ if reflect.IsMap $image }}"{{ $image.url }}"{{ else }}"{{ $image }}"{{ end }}
+  {{ end }}
+];
+
+function openLightbox(index) {
+  currentImageIndex = index;
+  const lightbox = document.getElementById('lightbox');
+  if (lightbox && lightbox.parentElement !== document.body) {
+    document.body.appendChild(lightbox);
+  }
+  lightbox.classList.add('active');
+  document.getElementById('lightbox-img').src = images[currentImageIndex];
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox(event) {
+  if (event.target.id === 'lightbox' || event.target.classList.contains('lightbox-close')) {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+}
+
+function changeImage(direction) {
+  currentImageIndex += direction;
+  if (currentImageIndex < 0) currentImageIndex = images.length - 1;
+  if (currentImageIndex >= images.length) currentImageIndex = 0;
+  document.getElementById('lightbox-img').src = images[currentImageIndex];
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', function(e) {
+  const lightbox = document.getElementById('lightbox');
+  if (lightbox && lightbox.classList.contains('active')) {
+    if (e.key === 'Escape') closeLightbox({ target: lightbox });
+    if (e.key === 'ArrowLeft') changeImage(-1);
+    if (e.key === 'ArrowRight') changeImage(1);
+  }
+});
+</script>
+{{ end }}
+
+<script>
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+</script>
+
+{{ end }}

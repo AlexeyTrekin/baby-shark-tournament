@@ -1,31 +1,31 @@
 ---
-title: "HEMA Tournament Series"
+title: "Baby Shark HEMA Tournament Series"
 ---
 
-# HEMA Tournament Series
+# Baby Shark HEMA Tournament Series
 
-Welcome to the official website for our Historical European Martial Arts tournament series!
-
-## 🗡️ Navigate Using the Sidebar
-
-Use the menu on the left to explore our tournaments organized by status.
+Welcome to the official website for our Baby Shark tournaments!
 
 ---
 
 ## About the Series
 
-This tournament series brings together HEMA practitioners from around the world to compete in various historical weapons disciplines. Each event features:
+This tournament series is dedicated to development of the HEMA community in Serbia and neighboring countries by providing a dedicated space for growth of the competitors.
 
-- Multiple weapon categories (Longsword, Rapier, Sword & Buckler)
-- International competitors
-- Professional judging and scoring
-- Workshops and training sessions
-- Vendor marketplace
+Usually, when the tournament is "open" and everyone competes in the same tier, many newcomers are in the situation when they are severely outranked and not only they can't fight for the medals, but also the experience is very limited because of the level difference. 
+The same problem often arises from the lack of women's category.
 
-**Click on any event in the sidebar to view full details including rules, schedule, venue information, and registration/results.**
-- International competitors
-- Professional judging and scoring
-- Workshops and training sessions
-- Vendor marketplace
+To battle this issue, we came up with this series of touraments.
+Every event is dedicated to one or two weapon styles, and will have "beginners" and "women's" categories. We are planning on holding up to 5-6 events every year in different clubs in Belgrade and Novi Sad.
 
-**Click on any event in the sidebar to view full details including rules, schedule, venue information, and registration/results.**
+So, here we aim to create a safe haven to grow, gain competition experience and test your skills. So give it a try, grow your own teeth, and let the big fish out there fear you!
+
+## Organizers
+
+The events are organized by HEMA clubs of Serbia:
+
+- Terca
+- Warlander Jousting
+- The Red Ravens
+- Pero
+- Akademija

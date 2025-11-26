@@ -74,4 +74,41 @@ body {
 .apply-button, .results-button {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+
+/* Table styling - lighter weight and tighter spacing */
+.markdown table,
+.event-section table,
+table {
+  font-weight: 300 !important;
+}
+
+.markdown table td,
+.markdown table th,
+.event-section table td,
+.event-section table th,
+table td,
+table th {
+  font-weight: 300 !important;
+  padding: 0.35rem 0.75rem !important;
+  line-height: 1.15 !important;
+}
+
+.markdown table th,
+.event-section table th,
+table th {
+  font-weight: 500 !important;
+}
+
+/* Lightbox image fix - ensure images display */
+#lightbox-img {
+  max-width: 90vw !important;
+  max-height: 90vh !important;
+  width: auto !important;
+  height: auto !important;
+  display: block !important;
+  object-fit: contain !important;
+  background: white;
+  border: 2px solid white;
+  border-radius: 4px;
+}
 </style>
