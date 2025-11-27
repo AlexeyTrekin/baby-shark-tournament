@@ -8,6 +8,11 @@ body {
   background-position: center;
 }
 
+/* Narrower content area to show more background */
+.book-page {
+  max-width: 800px;
+}
+
 /* Make content area semi-transparent so background shows through */
 .book-page,
 .book-menu nav,
@@ -110,5 +115,29 @@ table th {
   background: white;
   border: 2px solid white;
   border-radius: 4px;
+}
+
+/* Highlight current event in menu with light green background */
+.book-menu a[href*="current-event"] {
+  background: rgba(144, 238, 144, 0.4) !important;
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin: -4px -8px;
+  display: inline-block;
+}
+
+.book-menu a[href*="current-event"]:hover {
+  background: rgba(144, 238, 144, 0.6) !important;
+}
+
+/* Dark mode: adjust current event highlight */
+@media (prefers-color-scheme: dark) {
+  .book-menu a[href*="current-event"] {
+    background: rgba(34, 139, 34, 0.3) !important;
+  }
+  
+  .book-menu a[href*="current-event"]:hover {
+    background: rgba(34, 139, 34, 0.5) !important;
+  }
 }
 </style>

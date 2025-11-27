@@ -1,6 +1,6 @@
 baseURL = '/'
 languageCode = 'en-us'
-title = "HEMA Tournament Series"
+title ="\"Baby Shark\" HEMA Tournaments"
 theme = "hugo-book"
 
 enableRobotsTXT = true
@@ -15,12 +15,12 @@ enableEmoji = true
 
 [params]
   BookTheme = 'auto'
-  BookToC = true
+  BookToC = false
   BookSearch = true
   BookSection = '*'
   BookMenuBundle = '/menu'
   BookRepo = 'https://github.com/AlexeyTrekin/baby-shark'
-  
+  BookFavicon = 'favicon.ico'
   # Custom CSS
   BookCustomCSS = ['css/custom.css']
 

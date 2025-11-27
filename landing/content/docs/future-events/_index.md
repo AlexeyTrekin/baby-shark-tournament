@@ -2,9 +2,5 @@
 title: "Future Events"
 weight: 3
 bookFlatSection: false
-bookCollapseSection: false
+bookCollapseSection: true
 ---
-
-# Future Events
-
-Check out our upcoming tournament schedule.

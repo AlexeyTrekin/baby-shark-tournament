@@ -17,8 +17,8 @@ table td, table th {
 /* Gallery grid styling */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.75rem;
   margin: 2rem 0;
 }
 
@@ -226,6 +226,7 @@ table td, table th {
   {{ if .Params.event_status }}
   <span class="event-badge badge-{{ .Params.event_status }}">
     ✅ Past Event
+  </span>
   {{ end }}
 
   <h1>{{ .Title }}</h1>
