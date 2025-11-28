@@ -61,7 +61,7 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          aws s3 sync ./landing/public s3://baby-shark-tournament \
+          aws s3 sync ./landing/public s3://hemashark.win \
             --delete \
             --cache-control "max-age=3600"
 
