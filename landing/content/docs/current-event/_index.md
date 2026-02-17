@@ -83,7 +83,14 @@ rules_content: |
   
 timetable_content: |
   ## Sunday, February 22, 2026
-  Timing will be announced later.
+
+  | Time           | Event                |
+  |----------------|----------------------|
+  | 9:30           | Venue opening        |
+  | 10:30          | Registration start        |
+  | 11:00          | Fights start (Beginners category)   |
+  | 14:00          | Awarding ceremony    |
+  | 15:00          | Venue closing        |
 
 venue_content: |
   ## Venue
