@@ -86,11 +86,9 @@ timetable_content: |
 
   | Time           | Event                |
   |----------------|----------------------|
-  | 9:30           | Venue opening        |
-  | 10:30          | Registration start        |
-  | 11:00          | Fights start (Beginners category)   |
-  | 14:00          | Awarding ceremony    |
-  | 15:00          | Venue closing        |
+  | 17:00          | Venue opening, Registration start|
+  | 17:30          | Fights start        |
+  | 20:00          | Venue closing        |
 
 venue_content: |
   ## Venue
