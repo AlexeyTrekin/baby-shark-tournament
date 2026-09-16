@@ -43,7 +43,9 @@ rules_content: |
 timetable_content: |
   ## Schedule
 
-  TBA
+  Exact schedule TBA.
+
+  We will start around 12-13.h and the fights will last for about 2 hours.
 
 venue_content: |
   ## Venue
