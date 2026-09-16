@@ -1,118 +1,61 @@
 ---
-title: "Baby shark: Rapier 2026"
+title: "Baby shark: Longsword 2026"
 weight: 1
 type: event
 layout: active_event
 event_status: "current"
-application_url: https://forms.gle/HdjDJyqzJ7seJ3ECA
-application_content: |
-  Join us for the Baby shark: Rapier 2026! 
-  Registration is open
-  
-  **Registration Details:**
-  - Opens: February 10, 2026
-  - Closes: February 21, 2026 at 23:59
-  - Entry Fee: 1000 RSD, payment on spot
-  - Disciplines: Rapier-beginners, Rapier-women
-  
-rules_content: |
-  ## Participants Eligibility
+application_url: https://forms.gle/1kEeyWTCW754T3S17
 
-  **For the beginners category:**
+application_content: |
+  Registration is open for the Baby shark: Longsword 2026.
+
+
+rules_content: |
+  ## Categories
+
+  - Longsword - beginners
+
+  ## Admission Rules
+
+  The admission rules are the same as previously:
+
   - No more than 2 years of HEMA experience
   - No medals or record of major success (like top-16 at big tournaments) from any HEMA tournaments
   - No medals from related sports (tap fight, buhurt, olympic fencing)
 
-  **For women's category:**
-  - No experience or medal restrictions
-  
-  ## General Rules
+  ## Rules
 
-  Group phase - 3 minutes or 7 exchanges.
-  Eliminations - 3 minutes or 7 exchanges.
-  Finals - 3 “rounds” x (3 minutes or 7 exchanges); winner is the one who wins two “rounds”.
+  We will use the rules of Swordplay-2026 tournament (see Longsword section).
 
-  Exchange repeats: no exchange, yellow card
-  Everything else, including a red card and ring out counts as an exchange
+    [Swordplay-2026 rules](https://docs.google.com/document/d/1eBtnbKMbdQPTbPYh5-t6KuS_U3qYtH1zsD1KUGKzZXA/).
 
-  Points:
-
-   - 3 points thrust in a deep target (head, neck and torso)
-   - 1 point everything else.
-   - Weighted Afterblow attacker (aka thrust to the deep target vs anything else = 2 points, everything else 0)
-   - Double hit priority (1. thrust to the deep target, 2. thrust to the shallow target, 3. cut to the deep target, 4. cut to the shallow target), higher priority = 1 point; same priority = 0 points.
-   - 2 points: disarm / opponent losing the sword
-   - 1 point ring out
-   - 3 points red card
-   - No points: deflection of the blade (not grabbing)
-  
-  Forbidden:
-     - pommel strikes
-     - wrestling, including grabbing arms and weapon
-  In case of hand-to-hand combat situation, the fight is immediately stopped (no exchange)
-     - forbidden zones: back of the head, spine, groin, foot, back of the knee
-
-  Tiebreakers in the case of same number of points in groups:
-
-   - Head-to-head match score (in case of two fighters)
-   - Number of double hits (fewer is better)
-   - Difference in points (more is better)
-   - Random draw or “sudden death” exchange
+  To create better experience and safety for the beginners, we have the following difference to the Swordplay ruleset:
+  1. One-handed strikes do not count at all
+  2. Grappling is not allowed, the exchange will be stopped immediately
+  3. We will be more cautious to safety violations and excessive force rules applications, so aim for lower intensity than usually.
 
   ## Gear Requirements
 
-  ### Weapon
-  - Renaissance-style rapier blade and hilt
-  - Weight: 900–1300 g
-  - Length: 100–130 cm
-  - Rolled, thick, or spatulated tip
-  - Blade flex: 4–9 kg
+  Same as Swordplay-2026. If you have doubts in your gear, or lack some parts, [contact us](mailto:baby.shark.hema@gmail.com), we can help you to find something.
 
-  ### Protective Equipment
-  - No exposed skin
-  - No open metal protection (except for mask)
-  - Mask (350N min) with back-of-head protection
-  - Padded jacket
-  - Gorget
-  - Rigid chest protection
-  - Rigid elbow and knee protection
-  - Shin guards
-  - Gloves (padded gloves recommended)
-  - Groin protection (for men)
+  See the [gear requirements](https://docs.google.com/document/d/1TNqSz8FNsuRTq0vb67ITqsCLnRkWSmBQezVIe6JxMqM).
 
-  
 timetable_content: |
-  ## Sunday, February 22, 2026
+  ## Schedule
 
-  | Time           | Event                |
-  |----------------|----------------------|
-  | 17:00          | Venue opening, Registration start|
-  | 17:30          | Fights start        |
-  | 20:00          | Venue closing        |
+  TBA
 
 venue_content: |
   ## Venue
-  
-  **SPENS**  
-    Sutjeska 2, Novi Sad.
-    https://maps.app.goo.gl/SA5XBo3n7gZbcvsS8
 
-  
-  ## Getting There
-  
-  ### By Public Transport
-  - From Belgrade: train to Petrovaradin
-  - Bus or taxi from Petrovaradin
-  
-  ### By Car
-  - Free parking available
+  **Flavium hall**
+
+  [Open in Google Maps](https://maps.app.goo.gl/jrCPnW6SyLg3Ltbe6)
 ---
 
-Welcome to the **Baby Shark: Rapier 2026**! We continue our series with most requested weapon, single rapier.
+The **Baby Shark: Longsword 2026** tournament will take place on **24.10.2026** at Flavium hall.
 
-Tournament will take place at Sunday, **February 22, 2026**
+## Team
 
-**Team**
-
-- Zeljko Glumac, head referee
-- Alexey Trekin, coordinator
+- **Head organizer:** Aleksandar Ristić, club Terca
+- **Head secretary:** Alexey Trekin, club Crveni Gavranovi ([baby.shark.hema@gmail.com](mailto:baby.shark.hema@gmail.com))
