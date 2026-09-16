@@ -9,6 +9,7 @@ application_url: https://forms.gle/1kEeyWTCW754T3S17
 application_content: |
   Registration is open for the Baby shark: Longsword 2026.
 
+
 rules_content: |
   ## Categories
 
@@ -24,11 +25,18 @@ rules_content: |
 
   ## Rules
 
-  See the [Swordplay-2026 rules](https://docs.google.com/document/d/1eBtnbKMbdQPTbPYh5-t6KuS_U3qYtH1zsD1KUGKzZXA/).
+  We will use the rules of Swordplay-2026 tournament (see Longsword section).
 
-  This event has no one-handed strikes, no grappling, and stricter application of the safety and excessive force rules.
+    [Swordplay-2026 rules](https://docs.google.com/document/d/1eBtnbKMbdQPTbPYh5-t6KuS_U3qYtH1zsD1KUGKzZXA/).
+
+  To create better experience and safety for the beginners, we have the following difference to the Swordplay ruleset:
+  1. One-handed strikes do not count at all
+  2. Grappling is not allowed, the exchange will be stopped immediately
+  3. We will be more cautious to safety violations and excessive force rules applications, so aim for lower intensity than usually.
 
   ## Gear Requirements
+
+  Same as Swordplay-2026. If you have doubts in your gear, or lack some parts, [contact us](mailto:baby.shark.hema@gmail.com), we can help you to find something.
 
   See the [gear requirements](https://docs.google.com/document/d/1TNqSz8FNsuRTq0vb67ITqsCLnRkWSmBQezVIe6JxMqM).
 
@@ -49,5 +57,5 @@ The **Baby Shark: Longsword 2026** tournament will take place on **24.10.2026** 
 
 ## Team
 
-- **Head organizer:** Aleksandar RIstic, club Terca
-- **Head secretary:** Alexey Trekin, club Crveni Gavranovi
+- **Head organizer:** Aleksandar Ristić, club Terca
+- **Head secretary:** Alexey Trekin, club Crveni Gavranovi ([baby.shark.hema@gmail.com](mailto:baby.shark.hema@gmail.com))
