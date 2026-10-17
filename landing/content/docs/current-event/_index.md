@@ -8,7 +8,7 @@ application_url: https://forms.gle/1kEeyWTCW754T3S17
 
 application_content: |
   Registration is open for the Baby shark: Longsword 2026.
-
+  The participants number is limited to 16 total; currently the limit is reached, so the applications are accepted to the waiting list.
 
 rules_content: |
   ## Categories
@@ -36,26 +36,34 @@ rules_content: |
 
   ## Gear Requirements
 
-  Same as Swordplay-2026. If you have doubts in your gear, or lack some parts, [contact us](mailto:baby.shark.hema@gmail.com), we can help you to find something.
+  Same as Swordplay-2026 with exception of 350N-rated jackets and pants being NOT mandatory here.
+  
+  If you have doubts in your gear, or lack some parts, [contact us](mailto:baby.shark.hema@gmail.com), we can help you to find something.
+
 
   See the [gear requirements](https://docs.google.com/document/d/1TNqSz8FNsuRTq0vb67ITqsCLnRkWSmBQezVIe6JxMqM).
 
 timetable_content: |
-  ## Schedule
+  ## Preliminary schedule
 
-  Exact schedule TBA.
+  | Time  | Event                                |
+  |-------|--------------------------------------|
+  | 12:45 | Opening of the hall                  |
+  | 13:00 | Start of registration and gear check |
+  | 13:30 | Start of the group stage             |
+  | 14:00 | Start of playoff stage               |
+  | 14:40 | Closing of the tournament, award ceremony |
 
-  We will start around 12-13.h and the fights will last for about 2 hours.
 
 venue_content: |
-  ## Venue
+  ## Venue and travel
 
   **Flavium hall**
 
   [Open in Google Maps](https://maps.app.goo.gl/jrCPnW6SyLg3Ltbe6)
 ---
 
-The **Baby Shark: Longsword 2026** tournament will take place on **24.10.2026** at Flavium hall.
+The **Baby Shark: Longsword 2026** tournament will share the location with the joint training of the tournament staff for Swordplay 2026 at the **Flavium hall** on **24.10.2026**.
 
 ## Team
 
