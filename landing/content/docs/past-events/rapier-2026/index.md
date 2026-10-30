@@ -1,6 +1,6 @@
 ---
 title: "Baby shark: Rapier 2026"
-weight: 1
+weight: 2
 type: event
 layout: past_event
 event_status: "past"

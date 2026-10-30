@@ -140,8 +140,12 @@
     {{ if eq .Params.event_status "current" }}
       {{ if .Params.application_content }}
         {{ .Params.application_content | markdownify }}
-      {{ else }}
+      {{ else if .Params.application_url }}
         <p>Registration is now open for this tournament!</p>
+      {{ else }}
+        <div class="placeholder">
+          📅 Applications will open soon. Stay tuned for updates!
+        </div>
       {{ end }}
       
       {{ if .Params.application_url }}
