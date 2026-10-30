@@ -6,8 +6,8 @@ A website for HEMA (Historical European Martial Arts) tournament series, built w
 
 ```bash
 git clone --recurse-submodules https://github.com/AlexeyTrekin/baby-shark-tournament.git
-cd baby-shark/landing
-hugo server -D --port 1314
+cd baby-shark-tournament
+hugo server -D --port 1314 --source landing
 ```
 
 Visit: **http://localhost:1314**
@@ -60,9 +60,11 @@ baby-shark-media/
 └── longsword-2025/           # Event folder (same name as content)
     ├── photo1.jpeg           # Full-size images
     ├── photo2.jpeg
-    └── thumbnails/           # 200x200 thumbnails
-        ├── photo1.jpeg
-        └── photo2.jpeg
+    ├── thumbnails/           # 200x200 thumbnails
+    │   ├── photo1.jpeg
+    │   └── photo2.jpeg
+    └── preview/              # 1600px versions for photos shown inline on the event page
+        └── photo1.jpeg
 ```
 
 #### 1. Generate Thumbnails
@@ -80,6 +82,10 @@ mkdir -p thumbnails
 for img in *.jpg *.jpeg *.png; do
   [ -f "$img" ] && magick "$img" -resize 200x200^ -gravity center -extent 200x200 -quality 85 "thumbnails/$img"
 done
+
+# For photos shown inline on the event page (not in the gallery), also make 1600px previews
+mkdir -p preview
+magick photo1.jpeg -resize 1600x1600 -quality 82 -strip preview/photo1.jpeg
 ```
 
 #### 2. Upload to S3

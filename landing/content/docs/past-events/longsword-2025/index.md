@@ -1,6 +1,6 @@
 ---
 title: "Baby shark: Longsword 2025"
-weight: 1
+weight: 3
 type: event
 layout: past_event
 event_status: "past"

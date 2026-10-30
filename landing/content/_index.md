@@ -8,6 +8,12 @@ Welcome to the official website for our Baby Shark tournaments!
 
 ---
 
+## Latest Event
+
+🏆 **[Baby Shark: Longsword 2026]({{< relref "/docs/past-events/longsword-2026" >}})** took place on 24.10.2026 at the Flavium hall. Check out the results, the participants and the photos!
+
+---
+
 ## About the Series
 
 This tournament series is dedicated to development of the HEMA community in Serbia and neighboring countries by providing a dedicated space for growth of the competitors.

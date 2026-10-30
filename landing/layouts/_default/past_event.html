@@ -211,6 +211,26 @@ table td, table th {
   font-style: italic;
 }
 
+/* Full-width event photo linking to the full-size image */
+.event-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Name lists split into columns */
+.name-columns ul {
+  columns: 3 12rem;
+  column-gap: 2rem;
+}
+
+.name-columns li {
+  break-inside: avoid;
+}
+
 @media (max-width: 768px) {
   .event-nav ul {
     gap: 1rem;
