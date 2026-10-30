@@ -132,8 +132,7 @@ Huge thanks to the whole tournament staff: the judges, the scorekeepers and the 
 - **Head judge assistant:** Jelena Ranđelović
 - **Head scorekeeper:** Marko Kalanj
 - **Head scorekeeper assistant:** Nevena Grijak
-- **Head of gear check:** Grgur Stojanović
-- **Gear check assistant:** Jovan Đorđević
+- **Gear check:** Grgur Stojanović, Jovan Đorđević, Aleksandar Ardalić
 
 #### Judges
 
