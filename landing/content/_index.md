@@ -8,6 +8,10 @@ Welcome to the official website for our Baby Shark tournaments!
 
 ---
 
+## Upcoming Event
+
+⚔️ **[Baby Shark: single-handed 2026]({{< relref "/docs/current-event" >}})**, a mixed sabre and sidesword tournament for beginners, will take place on 21.11.2026 at the Flavium hall. Registration is open!
+
 ## Latest Event
 
 🏆 **[Baby Shark: Longsword 2026]({{< relref "/docs/past-events/longsword-2026" >}})** took place on 24.10.2026 at the Flavium hall. Check out the results, the participants and the photos!
